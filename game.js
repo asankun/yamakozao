@@ -17,59 +17,59 @@
 
 const ROUTES = {
   main: {
-    label: "蔵王の道",
+    label: "温泉の印",
     badgeClass: "main",
     color: "#e6a44a",
-    theme: "蔵王の観光スポット",
+    theme: "蔵王温泉の印",
     spots: [
       {
-        id:"k1", name:"蔵王ジャンプ台", x:100, y:90,
-        title:"謎その一：風の言葉",
-        desc:"風が<ruby>頬<rt>ほお</rt></ruby>をなでる。目の前には、空へと続く大きなジャンプ台がそびえ立っている。",
-        visual:"空へ飛び立つ場所を<ruby>示<rt>しめ</rt></ruby>すドイツ語を見つけよう。",
-        hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の書のジャンプ台の<ruby>説明<rt>せつめい</rt></ruby>のところにスキーに<ruby>関<rt>かん</rt></ruby>するドイツ語が書かれているよ。ジャンプ台の<ruby>別名<rt>べつめい</rt></ruby>でかかれているところを探そう。",
-        answer:["1","しゃんつぇ"],
-        story:"その言葉を口にした<ruby>瞬間<rt>しゅんかん</rt></ruby>、風が<ruby>優<rt>やさ</rt></ruby>しく吹き抜ける。ジャンプ台の方から、一枚の羽根がひらりと<ruby>舞<rt>ま</rt></ruby>い落ちてきた。",
+        id:"k1", name:"朱の印", x:100, y:90,
+        title:"印その一：朱",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
+        visual:"今から1900年前、日本武尊（ヤマトタケルノミコト）に付き添った人物が蔵王温泉を発見した。<br> 以下の5つのひらがな暗号を正しい順番に並べ替えるとその人物の名前になる。<br> た・ゆ・び・が・き・の <br> 彼のフルネームを答えよ。",
+        hint:"フルネームを漢字で書くと吉備多賀由になるよ。",
+        answer:["きびのたがゆ"],
+        story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>朱<rt>しゅ</rt></ruby>の印」を手に入れた！",
       },
 
       {
-        id:"k2", name:"色の変わる湖", x:220, y:180,
-        title:"謎その二：色が変わる水",
-        desc:"<ruby>湖<rt>みずうみ</rt></ruby>の<ruby>水面<rt>すいめん</rt></ruby>が太陽の光を受けて、宝石のように<ruby>輝<rt>かがや</rt></ruby>いている。",
-        visual:"青色やエメラルドグリーンに変わるのはドッコ沼と<ruby>蔵王御釜<rt>ざおうおかま</rt></ruby>のどっち？",
-        hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の書のドッコ沼と<ruby>蔵王御釜<rt>ざおうおかま</rt></ruby>のページに<ruby>説明<rt>せつめい</rt></ruby>があるよ。<ruby>冒険<rt>ぼうけん</rt></ruby>の書をよく読んでみよう。",
-        answer:["ドッコぬま","1","ドッコ沼","どっこぬま"],
-        story:"<ruby>湖<rt>みずうみ</rt></ruby>の名を<ruby>告<rt>つ</rt></ruby>げると、<ruby>水面<rt>すいめん</rt></ruby>がきらりと<ruby>輝<rt>かがや</rt></ruby>く。風に乗って、小さな羽根が手のひらへと<ruby>舞<rt>ま</rt></ruby>い<ruby>降<rt>お</rt></ruby>りてきた。",
+        id:"k2", name:"琥珀の印", x:220, y:180,
+        title:"印その二：琥珀",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
+        visual:"蔵王温泉の大きな特徴は、東北随一を誇る強酸性の硫黄泉であること。<br>肌と血管を若返らせ、殺菌・美肌効果があることから何と呼ばれているだろうか？<br>○○○づくりの湯<br>○に当てはまるひらがなを入力せよ。",
+        hint:"お肌が綺麗になって魅力的になる人を表す言葉がはいるよ。",
+        answer:["びじん"],
+        story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>琥珀<rt>こはく</rt></ruby>の印」を手に入れた！",
       },
 
       {
-        id:"k3", name:"スキーヤーの最高到達点", x:130, y:300,
-        title:"謎その三：プロ選手の飛行",
-        desc:"空高く飛び立つスキーヤーの姿が目に浮かぶ。ここには、世界に<ruby>誇<rt>ほこ</rt></ruby>る<ruby>大記録<rt>だいきろく</rt></ruby>が<ruby>刻<rt>きざ</rt></ruby>まれている。",
+        id:"k3", name:"蒼の印", x:130, y:300,
+        title:"印その三：蒼",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
         visual:"<ruby>蔵王<rt>ざおう</rt></ruby>ジャンプ台で<ruby>髙梨沙羅選手<rt>たかなしさらせんしゅ</rt></ruby>が<ruby>記録<rt>きろく</rt></ruby>した<ruby>最高<rt>さいこう</rt></ruby>の<ruby>飛距離<rt>ひきょり</rt></ruby>は何m？",
         hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の書のジャンプ台のところを見てみよう。<ruby>詳<rt>くわ</rt></ruby>しい<ruby>数値<rt>すうち</rt></ruby>が書いてあるよ。ジャンプ台の<ruby>看板<rt>かんばん</rt></ruby>にもヒントがあるかも...",
         answer:["1","106","１０６","１０６.０","106メートル"],
-        story:"まるでスキーヤーが空を<ruby>舞<rt>ま</rt></ruby>うように、一枚の羽根が風に乗ってあなたのもとへ飛んできた。",
+        story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>蒼<rt>そう</rt></ruby>の印」を手に入れた！",
       },
 
       {
-        id:"k4", name:"ジャンプ台の謎", x:400, y:200,
-        title:"謎その四：ジャンプ台の謎",
-        desc:"風が<ruby>頬<rt>ほお</rt></ruby>をなでる。目の前には、空へと続く大きなジャンプ台がそびえ立っている。",
-        visual:"ジャンプ<ruby>台<rt>だい</rt></ruby>の<ruby>標高差<rt>ひょうこうさ</rt></ruby>は<ruby>霞城<rt>かじょう</rt></ruby>セントラルとほぼ<ruby>同<rt>おな</rt></ruby>じ<ruby>何<rt>なん</rt></ruby>m？",
-        hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の<ruby>書<rt>しょ</rt></ruby>のジャンプ<ruby>台<rt>だい</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>をよく<ruby>読<rt>よ</rt></ruby>んでみてね。<ruby>標高差<rt>ひょうこうさ</rt></ruby>の<ruby>数字<rt>すうじ</rt></ruby>を探してみよう。",
-        answer:["1","106m","１０６","１０６ｍ","106メートル"],
-        story:"<ruby>眼下<rt>がんか</rt></ruby>に<ruby>広<rt>ひろ</rt></ruby>がる<ruby>壮大<rt>そうだい</rt></ruby>な<ruby>景色<rt>けしき</rt></ruby>とともに、<ruby>風<rt>かぜ</rt></ruby>を切るような<ruby>新<rt>あたら</rt></ruby>しい手がかりを<ruby>手<rt>て</rt></ruby>に入れた。",
+        id:"k4", name:"翆の印", x:400, y:200,
+        title:"印その四：翆",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
+        visual:"蔵王温泉で昔から親しまれ、名物料理になっているとある食材がある。その食材は野菜と一緒に焼き、甘辛いたれで味わわれる。その食材はいったいなんだ？",
+        hint:"「メェ～」と鳴く動物のお肉を使います。",
+        answer:["じんぎすかん","ジンギスカン"],
+        story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>翆<rt>すい</rt></ruby>の印」を手に入れた！",
       },
 
       {
-        id:"k5", name:"色の変わる湖", x:220, y:180,
-        title:"謎その五：色が変わる水",
-        desc:"<ruby>湖<rt>みずうみ</rt></ruby>の<ruby>水面<rt>すいめん</rt></ruby>が太陽の光を受けて、宝石のように<ruby>輝<rt>かがや</rt></ruby>いている。",
+        id:"k5", name:"山吹の印", x:220, y:180,
+        title:"印その五：山吹",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
         visual:"<ruby>季節<rt>きせつ</rt></ruby>や<ruby>天候<rt>てんこう</rt></ruby>で色が変わるのはドッコ沼と<ruby>蔵王御釜<rt>ざおうおかま</rt></ruby>のどっち？",
         hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の書のドッコ沼と<ruby>蔵王御釜<rt>ざおうおかま</rt></ruby>のページに<ruby>説明<rt>せつめい</rt></ruby>が<ruby>紹介<rt>しょうかい</rt></ruby>されているよ。<ruby>冒険<rt>ぼうけん</rt></ruby>の書をよく読んでみよう。",
         answer:["ざおうおかま","蔵王御釜","蔵王おかま","ざおう御釜","1","御釜","蔵王お釜"],
-        story:"<ruby>湖<rt>みずうみ</rt></ruby>の名を<ruby>告<rt>つ</rt></ruby>げると、<ruby>水面<rt>すいめん</rt></ruby>がきらりと<ruby>輝<rt>かがや</rt></ruby>く。風に乗って、小さな羽根が手のひらへと<ruby>舞<rt>ま</rt></ruby>い<ruby>降<rt>お</rt></ruby>りてきた。",
+        story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>山吹<rt>やまぶき</rt></ruby>の印」を手に入れた！",
       },
     ],
   },
@@ -917,7 +917,7 @@ $$(".tab-btn").forEach(btn => {
       showView("notebook");
     } else if(target === "view-map"){
       if(!state.route){
-        alert("まずは冒険の書を受け取り、道を選んでから探索できます。");
+        alert("まだ冒険が始まっていないよ。\nトップ画面の「謎を解き明かす」からはじめて、物語を進めよう！");
         return;
       }
       renderMap();
