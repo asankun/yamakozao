@@ -373,6 +373,34 @@ p.lead{
   width:100px;
   height:30px;
 }
+/* ===== ミニゲーム画面 =====
+   固定ヘッダーと固定タブバーの間の「残りの高さ」をiframeで使い切る。
+   （以前は75vh固定で、機種によってタブバーの下にもぐり込みゲームの下側が切れていた）
+   --header-h / --tabbar-h は game.js の syncLayoutVars() が実測値を入れる。 */
+#view-minigame.active{
+  flex: none;                       /* .view の flex:1 に高さを上書きされないように */
+  display:flex;
+  flex-direction:column;
+  height: calc(100vh - var(--header-h, 82px) - var(--tabbar-h, 64px));
+  height: calc(100dvh - var(--header-h, 82px) - var(--tabbar-h, 64px));
+  margin-top: calc(var(--header-h, 82px) - 60px);   /* body の padding-top(60px) との差分 */
+  padding: 8px 16px 10px;
+}
+#view-minigame .section-title{ font-size:18px; margin-bottom:4px; }
+#view-minigame .lead{ font-size:12.5px; line-height:1.6; margin-bottom:8px; }
+#minigameFrame{
+  flex:1 1 auto;
+  min-height:0;
+  width:100%;
+  border:0;
+  border-radius:16px;
+  background:#111827;
+  display:block;
+}
+@media (max-height: 700px){
+  #view-minigame .lead{ display:none; }
+}
+
 /* ===== 謎パズル ===== */
 .puzzle-box{
   background: rgba(13,35,45,0.5);
@@ -875,8 +903,7 @@ body.text-xlarge * {
   <section class="view" id="view-minigame">
     <h2 class="section-title">魔法をかけよう</h2>
     <p class="lead">技を成功させてコンボをきめて、謎を見つけよう。</p>
-    <iframe id="minigameFrame" title="ミニゲーム"
-      style="width:100%;height:75vh;border:0;border-radius:16px;background:#111827;display:block;"></iframe>
+    <iframe id="minigameFrame" title="ミニゲーム"></iframe>
   </section>
 
   <!-- ================= PUZZLE ================= -->

@@ -164,6 +164,14 @@ function findSpotAnywhere(spotId){
   return null;
 }
 
+/* 「冒険を始める」（startAdventure）を通過済みかどうか。
+   開始前にQRリンクを直接開いても謎に進めないようにするための判定に使う。 */
+function isAdventureStarted(){
+  return !!state.route;
+}
+const NOT_STARTED_MSG =
+  "まだ冒険が始まっていないよ。\nトップ画面の「謎を解き明かす」からはじめて、物語を進めよう！";
+
 /* そのspot専用のURL（QRコード生成用）を作る */
 function getSpotUrl(spotId){
   const url = new URL(window.location.href);
@@ -188,9 +196,23 @@ const views = {
   scan: $("#view-scan"),
 };
 
+/* 固定ヘッダー／タブバーの実際の高さをCSS変数に反映する（ミニゲーム画面の高さ計算用）。
+   文字サイズ変更・端末の回転・フォント読み込みで高さが変わるので都度更新する。 */
+function syncLayoutVars(){
+  const header = document.querySelector(".app-header");
+  const tab = document.querySelector(".tab-bar");
+  const root = document.documentElement.style;
+  if(header) root.setProperty("--header-h", header.offsetHeight + "px");
+  if(tab) root.setProperty("--tabbar-h", tab.offsetHeight + "px");
+}
+window.addEventListener("resize", syncLayoutVars);
+window.addEventListener("orientationchange", syncLayoutVars);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(syncLayoutVars);
+
 function showView(name){
   Object.values(views).forEach(v => v.classList.remove("active"));
   views[name].classList.add("active");
+  syncLayoutVars();
   window.scrollTo({top:0, behavior:"instant"});
   updateTabBar(name);
   if(name !== "scan") stopQrCamera();
@@ -278,6 +300,7 @@ function applyTextSize() {
     } else if (state.textSize === "xlarge") {
         document.body.classList.add("text-xlarge");
     }
+    syncLayoutVars();
 }
 
 const btn = $("#textSizeBtn");
@@ -602,6 +625,13 @@ function renderMap(){
    QRコードを読み取った先で、その場所固有の謎が出題される。   */
 
 function goToPuzzle(spot){
+  // どの経路から来ても、冒険開始前は謎に進ませない（最終防衛線）
+  if(!isAdventureStarted()){
+    alert(NOT_STARTED_MSG);
+    renderTop();
+    showView("top");
+    return;
+  }
   if(state.solvedSpotIds.includes(spot.id)){
     alert(`「${spot.name}」の謎はすでに解決済みだよ。まだ見つけていない場所を探してみよう！`);
     goToMap();
@@ -1039,6 +1069,15 @@ function handleScannedText(text){
 
   const { routeKey, spot } = found;
 
+  // 冒険を始める前はQRを読んでも謎に進ませない
+  if(!isAdventureStarted()){
+    alert(NOT_STARTED_MSG);
+    resetScanView();
+    renderTop();
+    showView("top");
+    return;
+  }
+
   // 別ルートのQRだった場合は解かせず、選択中ルートのマップへ戻す
   if(state.route && state.route !== routeKey){
     const currentRouteLabel = ROUTES[state.route] ? ROUTES[state.route].label : "選んだ道";
@@ -1049,13 +1088,6 @@ function handleScannedText(text){
     return;
   }
 
-  if(state.route !== routeKey){
-    state.route = routeKey;
-    state.solvedSpotIds = [];
-  }
-  if(state.phase === "intro"){
-    state.phase = "map";
-  }
   state.endingKey = null;
   saveState();
   renderTop();
@@ -1124,6 +1156,16 @@ function handleUrlParams(){
 
   const { routeKey, spot } = found;
 
+  // 冒険を始める前にリンクを直接開いても、謎には進ませずトップへ戻す。
+  // （以前は、ここでルートを勝手に選択してしまい、導入ストーリーを飛ばして解けてしまっていた）
+  if(!isAdventureStarted()){
+    history.replaceState(null, "", window.location.pathname + window.location.hash);
+    renderTop();
+    showView("top");
+    alert(NOT_STARTED_MSG);
+    return true;
+  }
+
   // すでに別ルートを選択済みで、かつQRが別ルートのものだった場合は
   // 進行させず、選んだルートのマップに戻す（誤って別ルートの問題を
   // 解いてしまうのを防ぐ）。
@@ -1145,14 +1187,6 @@ function handleUrlParams(){
     return true;
   }
 
-  // ルート未選択の場合は、このQRのルートを選択する。
-  if(state.route !== routeKey){
-    state.route = routeKey;
-    state.solvedSpotIds = [];
-  }
-  if(state.phase === "intro"){
-    state.phase = "map";
-  }
   state.endingKey = null;
   saveState();
   renderTop();

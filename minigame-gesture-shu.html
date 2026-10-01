@@ -15,6 +15,7 @@
 body {
     margin: 0;
     min-height: 100vh;
+    min-height: 100dvh;
     background:
         radial-gradient(circle at center, #6b2e1f 0%, #2b1610 45%, #150b08 100%);
     color: white;
@@ -26,14 +27,15 @@ body {
         sans-serif;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .game {
     width: min(92vw, 480px);
+    margin: auto;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -73,7 +75,7 @@ h1 {
 }
 
 .magicCircle {
-    width: min(80vw, 360px);
+    width: clamp(220px, min(80vw, 360px, calc(100vh - 300px)), 360px);
     aspect-ratio: 1 / 1;
     margin: 0 auto 15px;
 
@@ -308,6 +310,30 @@ button:disabled {
 
 .result button {
     margin-top: 10px;
+}
+
+/* ===== 小さい画面・低い画面でも切れないようにする調整 ===== */
+html {
+    height: 100%;
+}
+
+/* 画面が低いときは余白・文字を詰めて1画面に収める */
+@media (max-height: 700px) {
+    .game { padding: 4px 0; }
+    h1 { font-size: 20px; margin-bottom: 2px; }
+    h1 span { display: block; }
+    .subtitle { font-size: 12px; margin-bottom: 8px; line-height: 1.4; }
+    .status { margin-bottom: 8px; gap: 6px; }
+    .statusBox { padding: 5px 4px; }
+    .statusValue { font-size: 17px; }
+    .magicCircle { margin-bottom: 8px; width: clamp(196px, min(80vw, 360px, calc(100vh - 290px)), 360px); }
+    .spellName { font-size: 20px; }
+    .instruction { font-size: 12px; }
+    .gesture { margin-top: 8px; min-height: 44px; gap: 6px; }
+    .gestureItem { width: 40px; height: 40px; font-size: 21px; }
+    .message { min-height: 22px; font-size: 15px; margin: 6px 0; }
+    button { padding: 10px 8px; font-size: 15px; }
+    .help { display: none; }
 }
 </style>
 </head>
