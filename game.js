@@ -83,16 +83,16 @@ const STORY = {
     { char:'<img src="images/x.png" alt="x">', name:"X", text:"いい湯でしょう..この湯よりもすごい「伝説の湯」をご存じですか" },
     { char: '<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"そう聞くとXは古びた巻物を取り出した。" },
     { char: '<img src="images/x.png" alt="x">', name:"X", text:"この巻物は、伝説の湯について書かれた巻物です" },
-    { char: '<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"その巻物には、開湯の祖が遺した「伝説の湯に必要な4つの源泉の印」の存在が記されていた。" },
-    { char:'<img src="images/x.png" alt="x">', name:"X", text:"私はこれを調査している者です。4つの源泉の印を集めるには、この土地に隠された謎（クイズ）を解く必要があるのですが…一人では手が足りない。" },
+    { char: '<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"その巻物には、開湯の祖が遺した「伝説の湯に必要な5つの源泉の印」の存在が記されていた。" },
+    { char:'<img src="images/x.png" alt="x">', name:"X", text:"私はこれを調査している者です。5つの源泉の印を集めるには、この土地に隠された謎（クイズ）を解く必要があるのですが…一人では手が足りない。" },
     { char:'<img src="images/x.png" alt="x">', name:"X", text:"そこで、私とバディを組んで、蔵王温泉の真の姿を解き明かしませんか？ " },
     { char: '<img src="images/x.png" alt="x">', name:"X", text:"ありがとうございます！では早速行きましょう！" },
     { char: '<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"そうして、あなたはXと共に蔵王をめぐるミステリーツアーへと踏み出す" },
   ],
 
   ending: [
-    { char:'<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"あなたはすべての謎を解き、4つの源泉の印をすべて集めた。" },
-    { char:'<img src="images/x.png" alt="x">', name:"X", text:"見事です！4つの源泉の印がすべてそろいました！" },
+    { char:'<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"あなたはすべての謎を解き、5つの源泉の印をすべて集めた。" },
+    { char:'<img src="images/x.png" alt="x">', name:"X", text:"見事です！5つの源泉の印がすべてそろいました！" },
     { char:'<img src="images/x.png" alt="x">', name:"X", text:"これで「伝説の湯」の謎を解き明かすことができます。あなたと一緒に調査できて本当によかったです！" },
     { char:'<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"こうして、あなたとXのミステリーツアーは幕を閉じた。蔵王温泉に隠された謎を、あなたは見事に解き明かした。" },
   ],
@@ -254,7 +254,7 @@ $("#startBtn").addEventListener("click", () => {
   if(hasSave){
     resumeFromState();
   } else {
-    playCinematic("♨", "伝説の湯", "4つの源泉の印を集めろ！", "あなたは蔵王温泉に訪れた。", () => {
+    playCinematic("♨", "伝説の湯", "5つの源泉の印を集めろ！", "あなたは蔵王温泉に訪れた。", () => {
       beginIntro();
     });
   }
@@ -425,11 +425,11 @@ function skipIntroStory(){
     蔵王温泉に訪れたあなたは、足湯に入っていると隣にいた謎
     の怪しげな男Xに声をかけられた。
     <br>
-    その男から伝説の湯に必要な4つの源泉の印の存在が書かれた
+    その男から伝説の湯に必要な5つの源泉の印の存在が書かれた
     巻物を見せられた。
     <br>
-    どうやらXは4つの印について調査しているようで、印を集め
-    るには土地に隠された4つの謎を解く必要があるらしい。
+    どうやらXは5つの印について調査しているようで、印を集め
+    るには土地に隠された5つの謎を解く必要があるらしい。
     <br>
     謎を解くためにX手を組み、蔵王温泉の真の姿を解き明かすこ
     とになった。
@@ -538,7 +538,7 @@ function startAdventure(){
 
 function resumeFromState(){
   if(!state.route){
-    playCinematic("♨", "伝説の湯", "4つの源泉の印を集めろ！", "あなたは蔵王温泉に訪れた。", () => {
+    playCinematic("♨", "伝説の湯", "5つの源泉の印を集めろ！", "あなたは蔵王温泉に訪れた。", () => {
       beginIntro();
     });
     return;
@@ -687,7 +687,7 @@ function showPuzzle(spot){
   $("#puzzleVisual").innerHTML = spot.visual;
   $("#hintBox").classList.remove("show");
   $("#hintBox").innerHTML = spot.hint;
-  $("#hintToggle").textContent = "ヒントを見る（冒険の書より）";
+  $("#hintToggle").textContent = "ヒントを見る";
   $("#answerInput").value = "";
   $("#answerFeedback").textContent = "";
   $("#answerFeedback").className = "feedback-msg";
@@ -698,7 +698,7 @@ function showPuzzle(spot){
 $("#hintToggle").addEventListener("click", () => {
   const box = $("#hintBox");
   const showing = box.classList.toggle("show");
-  $("#hintToggle").textContent = showing ? "ヒントを隠す" : "ヒントを見る（冒険の書より）";
+  $("#hintToggle").textContent = showing ? "ヒントを隠す" : "ヒントを見る";
 });
 
 $("#puzzleBackBtn").addEventListener("click", () => {
@@ -731,7 +731,7 @@ function checkAnswer(){
       }
     );
   } else {
-    fb.textContent = "うーん、違うようだ。冒険の書のヒントをもう一度確かめてみて。";
+    fb.textContent = "うーん、違うようだ。ヒントを見直してもう一度解いてみよう。";
     fb.className = "feedback-msg ng";
   }
 }
@@ -756,7 +756,7 @@ function showFeatherStory(spot){
     $("#storyChoices").innerHTML = "";
     $("#storyNextBtn").style.display = "none";
 
-    typewriterText($("#storyText"), spot.story + "\n\n羽根を1枚、見つけた！", () => {
+    typewriterText($("#storyText"), spot.story + "\n\n印を1つ、見つけた！", () => {
       $("#storyNextBtn").style.display = "inline-flex";
 
       const complete = state.solvedSpotIds.length >= total;
@@ -764,7 +764,7 @@ function showFeatherStory(spot){
 
       $("#storyNextBtn").onclick = () => {
         if(complete){
-          playCinematic("♨", "4つの印がそろった", "Legendary Spring", "Xに集めた印を見せよう", () => {
+          playCinematic("♨", "5つの印がそろった", "Legendary Spring", "Xに集めた印を見せよう", () => {
             showEndingStory();
           });
         } else {
@@ -823,10 +823,10 @@ function showEndingStep(){
 const NOTEBOOK_PAGES = [
   {
     key:"map", label:"会場マップ",
-    render:() => `<div class="card"><div class="eyebrow">会場マップ</div><p class="lead">受付で受け取ったパンフレットを参考に、選んだ道に隠された5つのQRコードを、好きな順番で探し出そう。「探索」タブでは、どの謎をすでに解いたかを確認できます。</p></div>`,
+    render:() => `<div class="card"><div class="eyebrow">会場マップ</div><p class="lead">会場に隠された5つのQRコードを、好きな順番で探し出そう。「探索」タブでは、どの謎をすでに解いたかを確認できます。</p></div>`,
   },
   {
-    key:"record", label:"羽根の記録",
+    key:"record", label:"印の記録",
     render:() => {
       const route = currentRoute();
       const total = route ? route.spots.length : 3;
@@ -841,7 +841,7 @@ const NOTEBOOK_PAGES = [
       }
       return `<div class="card">
         <div class="eyebrow">羽根の記録欄</div>
-        <p class="lead" style="margin-bottom:10px;">これまでに集めた羽根：${state.solvedSpotIds.length} / ${total}</p>
+        <p class="lead" style="margin-bottom:10px;">これまでに集めた印：${state.solvedSpotIds.length} / ${total}</p>
         <div class="feather-log">${chips}</div>
       </div>`;
     },
