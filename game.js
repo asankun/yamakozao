@@ -645,6 +645,7 @@ const MINIGAME_BY_SPOT = {
   k2: "minigame-gesture-kohaku.html",  // ← 琥珀の印のスポットidに置き換え
   k3: "minigame-gesture-sou.html",     // ← 蒼の印のスポットidに置き換え
   k4: "minigame-gesture-sui.html",     // ← 翠の印のスポットidに置き換え
+  k5: "minigame-gesture-yamabuki.html"
 };
 
 let minigameOnComplete = null;
