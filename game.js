@@ -46,9 +46,9 @@ const ROUTES = {
         id:"k3", name:"蒼の印", x:130, y:300,
         title:"印その三：蒼",
         desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
-        visual:"<ruby>蔵王<rt>ざおう</rt></ruby>ジャンプ台で<ruby>髙梨沙羅選手<rt>たかなしさらせんしゅ</rt></ruby>が<ruby>記録<rt>きろく</rt></ruby>した<ruby>最高<rt>さいこう</rt></ruby>の<ruby>飛距離<rt>ひきょり</rt></ruby>は何m？",
-        hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の書のジャンプ台のところを見てみよう。<ruby>詳<rt>くわ</rt></ruby>しい<ruby>数値<rt>すうち</rt></ruby>が書いてあるよ。ジャンプ台の<ruby>看板<rt>かんばん</rt></ruby>にもヒントがあるかも...",
-        answer:["1","106","１０６","１０６.０","106メートル"],
+        visual:"蔵王温泉で100年以上愛されている、米粉で作られた生地で餡を包み、その上に色のついた米粒を乗せた食べ物をいが○○という。○に当てはまる食べ物を答えよ。",
+        hint:"その食べ物はお正月などにも食べられる、米粉を使った和菓子の仲間です。",
+        answer:["いがもち"],
         story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>蒼<rt>そう</rt></ruby>の印」を手に入れた！",
       },
 
@@ -66,9 +66,9 @@ const ROUTES = {
         id:"k5", name:"山吹の印", x:220, y:180,
         title:"印その五：山吹",
         desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
-        visual:"<ruby>季節<rt>きせつ</rt></ruby>や<ruby>天候<rt>てんこう</rt></ruby>で色が変わるのはドッコ沼と<ruby>蔵王御釜<rt>ざおうおかま</rt></ruby>のどっち？",
-        hint:"<ruby>冒険<rt>ぼうけん</rt></ruby>の書のドッコ沼と<ruby>蔵王御釜<rt>ざおうおかま</rt></ruby>のページに<ruby>説明<rt>せつめい</rt></ruby>が<ruby>紹介<rt>しょうかい</rt></ruby>されているよ。<ruby>冒険<rt>ぼうけん</rt></ruby>の書をよく読んでみよう。",
-        answer:["ざおうおかま","蔵王御釜","蔵王おかま","ざおう御釜","1","御釜","蔵王お釜"],
+        visual:"蔵王温泉は東北随一であり、全国でもトップクラスの○性である。○に当てはまる漢字を答えよ。",
+        hint:"レモンや梅干しを食べたときのような味を表す漢字です。",
+        answer:["酸性","酸"],
         story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>山吹<rt>やまぶき</rt></ruby>の印」を手に入れた！",
       },
     ],
@@ -842,7 +842,7 @@ function showEndingStep(){
       saveState();
       $("#storyNextBtn").textContent = "アンケートに答える";
       $("#storyNextBtn").onclick = () => {
-        window.open("https://docs.google.com/forms/d/e/1FAIpQLScEIeP9r2LDAQNzG5nxoUGIfGApFnYQOS9Q8OY6GQmB92rtGw/viewform?usp=publish-editor", "_blank");
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSeX7dR5Sr9WZoaccxxggb6uv9oWOC-R_nReghmBqgH6MJShsw/viewform?usp=publish-editor", "_blank");
       };
     }
   });
