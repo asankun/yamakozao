@@ -557,6 +557,7 @@ function showIntroStep(){
 function startAdventure(){
   state.route = "main";
   state.solvedSpotIds = [];
+  state.storyStep = 0;
   state.activeSpotId = null;
   saveState();
   renderTop();
@@ -799,7 +800,7 @@ function showFeatherStory(spot){
       $("#storyNextBtn").onclick = () => {
         if(complete){
           playCinematic("♨", "5つの印がそろった", "Legendary Spring", "Xに集めた印を見せよう", () => {
-            showEndingStory();
+            showEndingStory(true);
           });
         } else {
           goToMap();
