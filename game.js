@@ -210,6 +210,10 @@ window.addEventListener("orientationchange", syncLayoutVars);
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(syncLayoutVars);
 
 function showView(name){
+  // スキップボタンはイントロ中だけ表示（showIntroStep で再表示する）。
+  // 謎解決後・エンディングなど他のストーリー画面には出さない。
+  const skipBtn = document.getElementById("storySkipBtn");
+  if(skipBtn) skipBtn.style.display = "none";
   Object.values(views).forEach(v => v.classList.remove("active"));
   views[name].classList.add("active");
   syncLayoutVars();
