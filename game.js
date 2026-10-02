@@ -48,7 +48,7 @@ const ROUTES = {
         desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
         visual:"蔵王温泉で100年以上愛されている、米粉で作られた生地で<ruby>餡<rt>あん</rt></ruby>を<ruby>包<rt>つつ</rt></ruby>み、その上に色のついた<ruby>米粒<rt>こめつぶ</rt></ruby>を乗せた食べ物をいが○○という。<br>○に当てはまる食べ物を答えよ。",
         hint:"その食べ物はお<ruby>正月<rt>しょうがつ</rt></ruby>などにも食べられる、<ruby>米粉<rt>こめこ</rt></ruby>を使った<ruby>和菓子<rt>わかし</rt></ruby>の仲間です。",
-        answer:["いがもち"],
+        answer:["いがもち","いが"],
         story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>蒼<rt>そう</rt></ruby>の印」を手に入れた！",
       },
 
