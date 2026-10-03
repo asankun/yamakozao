@@ -25,8 +25,8 @@ const ROUTES = {
       {
         id:"k1", name:"朱の印", x:100, y:90,
         title:"印その一：朱",
-        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
-        visual:"今から1900年前、<ruby>日本武尊<rt>やまとたけるのみこと</rt></ruby>に付き<ruby>添<rt>そ</rt></ruby>った人物が蔵王温泉を発見した。<br> 以下の5つのひらがな暗号を正しい順番に並べ替えるとその人物の名前になる。<br> た・ゆ・び・が・き・の <br> 彼のフルネームを答えよ。",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な印」の手がかりになるかもしれない。",
+        visual:"今から1900年前、<ruby>日本武尊<rt>やまとたけるのみこと</rt></ruby>に付き<ruby>添<rt>そ</rt></ruby>った人物が蔵王温泉を発見した。<br> 以下の5つのひらがな暗号を正しい順番に並べ替えるとその人物の名前になる。<br><strong>た・ゆ・び・が・き・の</strong><br> 彼のフルネームを答えよ。",
         hint:"フルネームを漢字で書くと吉備多賀由になるよ。",
         answer:["きびのたがゆ"],
         story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>朱<rt>しゅ</rt></ruby>の印」を手に入れた！",
@@ -35,8 +35,8 @@ const ROUTES = {
       {
         id:"k2", name:"琥珀の印", x:220, y:180,
         title:"印その二：琥珀",
-        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
-        visual:"蔵王温泉の大きな特徴は、東北<ruby>随一<rt>ずいいち</rt></ruby>を誇る<ruby>強酸性<rt>きょうさんせい</rt></ruby>の<ruby>硫黄泉<rt>いおうせん</rt></ruby>であること。<br>肌と血管を<ruby>若返らせ<rt>わかがえ</rt></ruby>らせ、<ruby>殺菌・美肌効果<rt>さっきん・びはだこうか</rt></ruby>があることから何と呼ばれているだろうか？<br>○○○づくりの湯<br>○に当てはまるひらがなを入力せよ。",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な印」の手がかりになるかもしれない。",
+        visual:"蔵王温泉の大きな特徴は、東北<ruby>随一<rt>ずいいち</rt></ruby>を誇る<ruby>強酸性<rt>きょうさんせい</rt></ruby>の<ruby>硫黄泉<rt>いおうせん</rt></ruby>であること。<br>肌と血管を<ruby>若返<rt>わかがえ</rt></ruby>らせ、<ruby>殺菌・美肌効果<rt>さっきん・びはだこうか</rt></ruby>があることから何と呼ばれているだろうか？<br>○○○づくりの湯<br>○に当てはまるひらがなを入力せよ。",
         hint:"お肌が<ruby>綺麗<rt>きれい</rt></ruby>になって<ruby>魅力的<rt>みりょくてき</rt></ruby>になる人を表す言葉がはいるよ。",
         answer:["びじん"],
         story:"謎を解くと近くから<ruby>不思議<rt>ふしぎ</rt></ruby>な光が…<br>謎を解いた<ruby>証<rt>あかし</rt></ruby>として「<ruby>琥珀<rt>こはく</rt></ruby>の印」を手に入れた！",
@@ -45,7 +45,7 @@ const ROUTES = {
       {
         id:"k3", name:"蒼の印", x:130, y:300,
         title:"印その三：蒼",
-        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な印」の手がかりになるかもしれない。",
         visual:"蔵王温泉で100年以上愛されている、米粉で作られた生地で<ruby>餡<rt>あん</rt></ruby>を<ruby>包<rt>つつ</rt></ruby>み、その上に色のついた<ruby>米粒<rt>こめつぶ</rt></ruby>を乗せた食べ物をいが○○という。<br>○に当てはまる食べ物を答えよ。",
         hint:"その食べ物はお<ruby>正月<rt>しょうがつ</rt></ruby>などにも食べられる、<ruby>米粉<rt>こめこ</rt></ruby>を使った<ruby>和菓子<rt>わかし</rt></ruby>の仲間です。",
         answer:["いがもち","もち"],
@@ -55,7 +55,7 @@ const ROUTES = {
       {
         id:"k4", name:"翆の印", x:400, y:200,
         title:"印その四：翆",
-        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な印」の手がかりになるかもしれない。",
         visual:"蔵王温泉で昔から親しまれ、<ruby>名物料理<rt>めいぶつりょうり</rt></ruby>になっているとある食材がある。<br>その食材は野菜と一緒に焼き、<ruby>甘辛<rt>あまから</rt></ruby>いたれで<ruby>味<rt>あじ</rt></ruby>わわれる。<br>その食べ物はいったいなんだ？",
         hint:"「メェ～」と鳴く動物のお肉を使います。",
         answer:["じんぎすかん","ジンギスカン"],
@@ -65,7 +65,7 @@ const ROUTES = {
       {
         id:"k5", name:"山吹の印", x:220, y:180,
         title:"印その五：山吹",
-        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な5つの印」の手がかりになるかもしれない。",
+        desc:"<ruby>魔法<rt>まほう</rt></ruby>をかけると、謎が<ruby>浮<rt>う</rt></ruby>かび上がってきた。「<ruby>伝説<rt>でんせつ</rt></ruby>の湯に必要な印」の手がかりになるかもしれない。",
         visual:"蔵王温泉は東北<ruby>随一<rt>ずいいち</rt></ruby>であり、全国でもトップクラスの○性である。<br>○に当てはまる漢字を答えよ。",
         hint:"レモンや梅干しを食べたときのような味を表す漢字です。",
         answer:["酸性","酸"],
@@ -91,8 +91,8 @@ const STORY = {
   ],
 
   ending: [
-    { char:'<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"あなたはすべての謎を解き、5つの源泉の印をすべて集めた。" },
-    { char:'<img src="images/x.png" alt="x">', name:"X", text:"見事です！5つの源泉の印がすべてそろいました！" },
+    { char:'<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"あなたはいくつかの謎を解き、源泉の印を集めた。" },
+    { char:'<img src="images/x.png" alt="x">', name:"X", text:"見事です！私が集めた印と合わせて源泉の印がすべてそろいました！" },
     { char:'<img src="images/x.png" alt="x">', name:"X", text:"これで「伝説の湯」の謎を解き明かすことができます。あなたと一緒に調査できて本当によかったです！" },
     { char:'<img src="images/navi.png" alt="ナレーション">', name:"ナレーション", text:"こうして、あなたとXのミステリーツアーは幕を閉じた。蔵王温泉に隠された謎を、あなたは見事に解き明かした。" },
   ],
@@ -456,7 +456,7 @@ function skipIntroStory(){
     巻物を見せられた。
     <br>
     どうやらXは5つの印について調査しているようで、印を集め
-    るには土地に隠された5つの謎を解く必要があるらしい。
+    るには土地に隠された謎を解く必要があるらしい。
     <br>
     謎を解くためにX手を組み、蔵王温泉の真の姿を解き明かすこ
     とになった。
@@ -566,7 +566,7 @@ function startAdventure(){
 
 function resumeFromState(){
   if(!state.route){
-    playCinematic("♨", "伝説の湯", "5つの源泉の印を集めろ！", "あなたは蔵王温泉に訪れた。", () => {
+    playCinematic("♨", "伝説の湯", "源泉の印を集めろ！", "あなたは蔵王温泉に訪れた。", () => {
       beginIntro();
     });
     return;
@@ -646,6 +646,11 @@ function goToPuzzle(spot){
   state.activeSpotId = spot.id;
   saveState();
 
+  if(!MINIGAME_ENABLED){
+    showPuzzle(spot);
+    return;
+  }
+
   runMinigame(spot, () => {
     playCinematic(
       "✨",
@@ -665,7 +670,8 @@ function goToPuzzle(spot){
    各ミニゲームは postMessage({source:"minigame", type:"clear"}) を
    親ページに送るとクリア扱いになる。                                */
 
-const MINIGAME_ENABLED = true;
+const MINIGAME_ENABLED = false;
+const CLEAR_COUNT = 3;
 
 const MINIGAME_FILES = [
   "minigame-maze.html",    // 傾け迷路
@@ -794,12 +800,12 @@ function showFeatherStory(spot){
     typewriterText($("#storyText"), spot.story + "\n\n印を1つ、見つけた！", () => {
       $("#storyNextBtn").style.display = "inline-flex";
 
-      const complete = state.solvedSpotIds.length >= total;
+      const complete = state.solvedSpotIds.length >= CLEAR_COUNT;
       $("#storyNextBtn").textContent = complete ? "Xに集めた印を見せる" : "謎一覧へ戻る";
 
       $("#storyNextBtn").onclick = () => {
         if(complete){
-          playCinematic("♨", "5つの印がそろった", "Legendary Spring", "Xに集めた印を見せよう", () => {
+          playCinematic("♨", "印がそろった", "Legendary Spring", "Xに集めた印を見せよう", () => {
             showEndingStory(true);
           });
         } else {
@@ -858,7 +864,7 @@ function showEndingStep(){
 const NOTEBOOK_PAGES = [
   {
     key:"map", label:"会場マップ",
-    render:() => `<div class="card"><div class="eyebrow">会場マップ</div><p class="lead">会場に隠された5つのQRコードを、好きな順番で探し出そう。「探索」タブでは、どの謎をすでに解いたかを確認できます。</p></div>`,
+    render:() => `<div class="card"><div class="eyebrow">会場マップ</div><p class="lead">会場に隠された5つのQRコードのうち3つを、好きな順番で探し出そう。「探索」タブでは、どの謎をすでに解いたかを確認できます。</p></div>`,
   },
   {
     key:"record", label:"印の記録",
